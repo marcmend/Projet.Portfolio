@@ -1,0 +1,421 @@
+/*
+GOOGLE FONT pour police
+Police 1 Titre : Oswald
+Police 2 Texte : Raleway
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&family=Roboto:wght@400;500&display=swap');
+
+:root{
+    --mainColor: #676767;
+    --secondaryColor: #C9C9C9;
+    --tertiaryColor: #E9E9E9;
+    --Title: #E8BE16;
+    --Text: #000000;
+    --brdColor: #DC143C;
+
+}
+
+
+/*Marges*/
+html, body {
+    padding: 0; /*Marges à l'intérieur du body (marges orange) : 0 haut et bas ; 5% sur côtés*/
+    margin: 0 auto; /*Marges extérieur du body*/
+    background: var(--tertiaryColor);
+}
+
+/*Font body*/
+body {
+    font-family: 'Oswald', sans-serif;
+}
+
+/*Font / Color Titles*/
+h1, h2, h3, strong {
+    color: var(--Title);
+    font-family: 'Roboto', sans-serif;
+}
+
+h4, h5, strong {
+    color: var(--Text);
+    font-family: 'Roboto', sans-serif;
+}
+
+/*Retirer underline des liens*/
+a {
+    text-decoration: none;
+}
+
+/*Retirer les points pour Liste*/
+ul {
+    list-style: none;
+}
+
+h1 { font-size: 56px;}
+h2 { font-size: 38px;}
+h3 { font-size: 28px}
+h4 { font-size: 24px;}
+
+/* NAV BAR */
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: var(--mainColor);
+}
+nav .top {
+    display: flex;
+    align-items: center;
+}
+nav .top img {
+    width: 150px;
+    height: 150px;
+    margin: 15px;
+}
+nav ul {
+    display: flex;
+    margin-right: 15px;
+}
+nav ul li {
+    margin-left: 15px;
+    cursor: pointer;
+    border-bottom: 2px solid var(--mainColor);
+    color: var(--secondaryColor);
+    font-size: 24px;
+}
+nav ul li:hover {
+    border-bottom-color: var(--Title);
+}
+
+/* PREMIERE SECTION : MAINPAGE */
+
+.mainpage {
+    background-image: url(ressources/Background.png);
+    background-position: center center; /*Horizontal Vertical*/
+    background-size: cover;
+    overflow: auto;
+    height: 1200px;
+}
+.mainpage h1 {
+    margin-top: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mainpage .buttonmp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mainpage .buttonmp button {
+    font-size: 24px;
+    font-family: 'Roboto', sans-serif;
+    color: var(--secondaryColor);
+    width: 200px;
+    height: 50px;
+    background-color: transparent;
+    border: 5px solid var(--brdColor);
+    cursor: pointer;
+}
+
+/* DEUXIEME SECTION : ABOUT ME */
+
+/* 
+   -      TITRE      -
+   [PORTRAIT]  [ITEM1]
+               [ITEM2]
+*/
+
+.abme {
+    background-color: var(--tertiaryColor);
+    height: 600px;
+}
+.abme .abme-container {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-rows: 200px; /*seule première row est définie*/
+    grid-gap: 5px; /* grid-column-gap & grid-row-gap */
+    grid-template-areas: 
+    "title title"
+    "portrait item-1"
+    "portrait item-2";
+}
+
+.grid-title {
+    grid-column-start: 1;
+    grid-column-end: -1; /*-1 = jusqu'à la fin colonne ; ou spécifier la dernière colonne*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-row: 1;
+}
+
+.grid-portrait img {
+    width: 150px;
+    height: 150px;
+    margin-left: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 50% 50% 50% 50%;
+    border-color: #E8BE16;
+    border-style: solid;
+}
+.grid-portrait {
+    grid-area: portrait;
+    justify-self: center;
+    justify-items: center;
+    
+}
+.grid-item-1 {
+    grid-area: item-1;
+}
+.grid-item-2 {
+    grid-area: item-2;
+}
+
+
+/* TROISIEME SECTION : MY SERVICES */
+
+.myservices {
+    background-color: var(--secondaryColor);
+    height: 450px;
+}
+
+.mysrvc-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-rows: 150px;
+    grid-gap: 10px;
+    grid-template-areas: 
+    "title title title"
+    "item-1 item-2 item-3";
+}
+
+.mysrvc-container .grid-title {
+    grid-area: title; /*Déjà aligné*/
+}
+
+.mysrvc-container h1 {
+    color: var(--Text);
+}
+
+
+.mysrvc-container .grid-itemsvrc {
+    width: 250px;
+    height: 250px;
+    margin: 0;
+    padding: 3px 5px;
+    background-color: var(--tertiaryColor);
+    text-align: center;
+    display: flex;
+    justify-self: center;
+    flex-direction: column;
+}
+
+.grid-service-1 {
+    grid-area: item-1;
+}
+.grid-service-2 {
+    grid-area: item-2;
+}
+.grid-service-3 {
+    grid-area: item-3;
+}
+
+/* QUATRIEME SECTION : EXPERIENCE */
+
+/*
+TITLE
+C1 C2 C3
+[]   |   []
+
+*/
+
+
+.experience {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 5px 1fr;
+}
+
+.experience-component {
+    margin: 0px 20px 20px 20px;
+}
+.experience-date {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--brdColor);
+}
+.experience-date-right {
+    text-align: right;
+}
+.experience-date-left {
+    text-align: left;
+}
+
+.experience-mid {
+    position: relative; /*relative pour point absolute*/
+    background: var(--mainColor);
+}
+.experience-point {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    transform: translateX(-50%);
+    background: var(--Title);
+}
+.experience-text {
+    height: 1.5;
+}
+
+.experience-point-2 {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    transform: translateX(-50%);
+    background: var(--Title);
+    grid-column: 2;
+    grid-column-start: 2;
+
+}
+
+/* CINQUIEME SECTION : PORTFOLIO */
+h1 {
+    text-align: center;
+}
+.portfolio img {
+    height: 500px;
+    width: 500px;
+    margin: 20px;
+    border: 3px solid var(--Title);
+}
+.portfolio .projet {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+}
+
+/* FOOTER */
+
+footer {
+	margin-top: 5%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	padding: 10px;
+	background-color: var(--mainColor);
+	color: white;
+}
+footer .flinks {
+	font-size: 16px;
+	color: var(--tertiaryColor);
+	cursor: pointer;
+}
+
+.SNSlinks ul {
+    margin: 0;
+    font-size: 50px;
+    display: flex;
+    color: white;
+}
+
+.SNSlinks ul li {
+    padding-left: 20px;
+}
+
+.footer .flinks p:hover {
+	color: var(--Title);
+}
+.SNSlinks li:hover{
+    color: var(--Title);
+}
+
+/* Contact Me */
+
+form {
+    padding: 30px;
+    margin: 0;
+    background-color: var(--mainColor);
+    background-size: cover;
+    position: absolute;
+
+  }
+
+
+  form .corps-formulaire {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+  }
+  form .corps-formulaire .groupe {
+    position: relative; /* Pour mettre positionner l’élément dans le flux normal de la page */
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  form .corps-formulaire .gauche .groupe input {
+    margin-top: 5px;
+    padding: 10px 5px 10px 30px;
+  }
+  form .corps-formulaire .gauche .groupe i {
+    position: absolute; /* positionné par rapport à son parent le plus proche positionné */
+    left: 0;
+    top: 25px;
+    padding: 9px 8px;
+  }
+  form .corps-formulaire .droite {
+    margin-left: 40px;
+  }
+  form .corps-formulaire .droite .groupe {
+    height: 100%;
+  }
+  form .corps-formulaire .droite .groupe textarea {
+    margin-top: 5px;
+    padding: 10px;
+    outline: none;
+    resize: none;
+    height: 72%;
+  }
+  form .pied-formulaire button {
+    margin-top: 10px;
+    font-size: 15px;
+    border: none;
+    padding: 10px 20px;
+    outline: none;
+    cursor: pointer;
+  }
+  form .pied-formulaire button:hover {
+    transform: scale(1.05);
+  }
+
+
+/*Format mobile*/
+
+@media screen and (max-width: 1200px) {
+    nav {
+        justify-content: center;
+    }
+
+    /*supprimer les onglets pour affichage mobile*/
+    nav ul {
+        display: none 
+    }
+
+    
+}

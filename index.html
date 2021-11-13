@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><!--Cette section donne infos gén sur la page : titre, encodage (caractères spéciaux) etc. Infos de l'en-tête ne sont pas affiché sur la page-->
+
+    <meta charset="UTF-8"><!--Encodage de la page. Détermine comment vont s'afficher les caractère spéciaux. Utiliser utf-8 qui affiche la plupart des symboles. Vérifier que le fichier est enregistré avec utf-8 :  save with encoding + utf-8 // en gén par défaut-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SPONGEBOB's Portfolio</title>
+
+<!--Lier index.html au fichier style.css ; spécifier nom dossier sous dossier si diff-->
+    <link rel="stylesheet" href="style.css">
+
+<!--Lier icons FontAwesome cdn-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    
+    <!-- BARRE NAVIGATION -->
+
+    <nav> <!--Barre de navigation : Logo, nom(SPONGEBOB) - HOME, ABOUT ME, SERVICES, EXPERIENCE, PORTFOLIO, CONTACTS
+              Diviser la barre de navigation en deux partie. P1 : Logo+Nom(profile) ; P2 : Onglet
+              Aligner avec Flexbox/Grid-->
+        <div class="top"><!--div = bloc stocker pls élements-->
+            <img src="ressources/Logo.png" alt="spongebobsportrait">
+            <h1>SPONGEBOB</h1>
+        </div>
+        <ul><!--Liste-->
+            <li>HOME</li>
+            <li>ABOUT ME</li>
+            <li>SERVICES</li>
+            <li>EXPERIENCE</li>
+            <li>PORTFOLIO</li>
+            <a href="contact.html"> <!--Lier page contact.html : a href ; redirection-->
+                <li>CONTACTS</li>
+            </a>
+        </ul>
+    </nav>
+
+    <!-- PREMIERE SECTION -->
+
+        
+    <div class="mainpage">
+            <h1>TITRE EG : WEBDEV</h1>
+        <div class="buttonmp"><button>CONTACT ME</button></div>
+    </div>
+
+    <!-- DEUXIEME SECTION : ABOUT ME-->
+
+    <div class="abme">
+        <div class="abme-container">
+            <div class="grid-item grid-title">
+                <h1>ABOUT ME</h1></div>
+            <div class="grid-item grid-portrait"><img src="ressources/Portrait1.png" alt="spongebobsportrait"></div>        
+        <div class="grid-item grid-item-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, a? Adipisci dolore doloribus magni velit repudiandae aliquam voluptatum voluptas, totam fugiat id tenetur omnis consequuntur dolorum? Recusandae laboriosam est incidunt deleniti nemo sunt facilis hic velit, repellendus voluptates reiciendis ut iste tempora possimus, quia accusantium? Accusamus, distinctio labore error ipsum quis temporibus nisi, quidem aut consequuntur assumenda adipisci doloremque quo repellendus voluptas voluptate quod accusantium laboriosam nesciunt impedit inventore veniam eos recusandae voluptatibus! Sequi aliquam deleniti earum, alias exercitationem nulla soluta doloribus nobis numquam iste quisquam unde necessitatibus reiciendis corrupti aliquid ratione minima dicta officiis nihil cupiditate, tempora ea natus voluptas? Laudantium, dolore! Sed cum odio placeat culpa in eum facilis rerum? Dicta provident quasi, aliquam labore nostrum quos cumque!</div>
+        <div class="grid-item grid-item-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales commodo felis nec gravida. Mauris vitae mi eleifend turpis finibus rutrum sed id metus. Donec eget bibendum mi. Nulla eu tincidunt erat. Aenean eget pellentesque tortor. Donec volutpat dolor fringilla bibendum faucibus.</div>
+        </div>
+    </div>
+
+    <!-- TROISIEME SECTION : MY SERVICES-->
+
+    <div class="myservices">
+        <div class="mysrvc-container">
+            <div class="grid-item grid-title">           
+            <h1>MY SERVICES</h1>
+        </div>
+            <div class="grid-itemsvrc grid-service-1">
+                <h4>SERVICE 1</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa commodi cumque, illum molestias perferendis voluptate in modi molestiae accusantium est?</p>
+            </div>
+            <div class="grid-itemsvrc grid-service-2">
+                <h4>SERVICE 2</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum nam nihil quos, sapiente voluptatem debitis iste iure quam architecto inventore?</p>
+            </div>
+            <div class="grid-itemsvrc grid-service-3">
+                <h4>SERVICE 3</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum nam nihil quos, sapiente voluptatem debitis iste iure quam architecto inventore?</p>
+            </div>
+       </div>
+    
+    <!-- QUATRIEME SECTION : EXPERIENCE -->
+    
+        <h1>EXPERIENCE</h1>
+    <div class="experience">
+
+            <div class="experience-component">
+                <div class="experience-date experience-date-right">2000-2010</div>
+            </div>
+            
+            <div class="experience-mid">
+                    <div class="experience-point"></div>
+            </div>
+
+            <div class="experience-component">
+                <h4 class="experience-title">Titre xp1</h5>
+                <p class="experience-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam ad sint perferendis vitae ea. Perspiciatis pariatur minus cum magni nemo?</p>
+            </div>
+
+            <div class="experience-component">
+                <h4 class="experience-title">Titre xp2</h5>
+                <p class="experience-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam ad sint perferendis vitae ea. Perspiciatis pariatur minus cum magni nemo?</p>
+            </div>
+
+            <div class="experience-mid">
+                <div class="experience-point"></div>
+            </div>
+
+            <div class="experience-component">
+                <div class="experience-date experience-date-left">2010-2020</div>
+            </div>
+
+            <div class="experience-component">
+                <div class="experience-date experience-date-right">2020-2021</div>
+            </div>
+
+            <div class="experience-mid">
+                <div class="experience-point"></div>
+            </div>
+
+            <div class="experience-component">
+                <h4 class="experience-title">Titre xp3</h5>
+                <p class="experience-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam ad sint perferendis vitae ea. Perspiciatis pariatur minus cum magni nemo?</p>
+            </div>
+
+            <div class="experience-mid">
+                <div class="experience-point-2"></div>
+            </div>
+
+
+
+                
+    </div>
+
+
+    <!-- CINQUIEME SECTION : PORTFOLIO -->
+
+    <div class="portfolio">
+        <h1>PORTFOLIO</h1>
+        <div class="projet">
+            <img src="ressources/EgPortfolio.jpg" alt="bobportfolio">
+            <img src="ressources/EgPortfolio.jpg" alt="bobportfolio"></div>
+    </div>
+    
+
+    <!-- FOOTER -->
+    
+    <footer>
+        <div class="flinks">
+        <p>Home</p>
+        <p>About me</p>
+        <p>Services</p>
+        </div>
+
+        <div class="flinks">
+            <p>Experience</p>
+            <p>Portfolio</p>
+            <p>Contacts</p>
+        </div>
+
+        <div class="flinks SNSlinks">
+            <ul class=sns>
+                <li><i class="fab fa-facebook"></i></li>
+                <li><i class="fab fa-twitter"></i>
+                <li><i class="fab fa-instagram"></i></li>
+                <li><i class="fab fa-linkedin"></i></li>
+            </ul>
+
+        </div>
+    </footer>
+
+</body>
+</html>
